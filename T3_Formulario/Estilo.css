@@ -1,0 +1,79 @@
+html {
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: #0367A6;
+}
+
+.contenedor {
+	max-width: 450px;
+	height: auto;
+	background-color: #EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+}
+
+.FormHigh {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem #91A826;
+	margin-bottom: 1rem;
+}
+
+.FormHigh h2 {
+	font-weight: bold;
+	color: #A3D2D3;
+	font-size: 18px;
+}
+
+h2 span {
+	color: #F63C00;
+}
+
+.FormRegistro {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.FormBoton {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.Entrada, .btnRegistrar, .btn_reset {
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C4EE00 .2rem;
+	transition: all .5s;
+}
+
+.Entrada :focus {
+	border-bottom: solid #F39B53 .2rem;
+}
+
+.btnRegistrar, .btnLimpiar {
+	width: 40%;
+	border-bottom: none;
+	background-color: #4A4D5A;
+	color: white;
+}
+
+.btnLimpiar {
+	background-color: #F2DB66;
+}
+
+.btnRegistrar:hover {
+	background-color: #4C9ED9;
+}
+
+.btnLimpiar:hover {
+	background-color: #FA9535;
+}
