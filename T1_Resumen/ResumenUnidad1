@@ -1,0 +1,194 @@
+== Modelo de caja
+
+Es el comportamiento de css que hace que todos los elementos de las paginas se representen mediante cajas regulares.
+
+Las cajas se crean de una página se crean automaticamente.  Cada vez que se inserta una etiqueta HTML, se crea una nueva caja rectangular que encierra los contenidos de ese elemento.
+
+*_Content:_* se trata del contenido HTML del elemento (las palabras de un párrafo, una imagen, el texto de una lista de elementos, etc.).
+
+*_Padding:_* espacio libre opcional existente entre el contenido y el borde.
+
+*_border:_* línea que encierra completamente el contenido y su relleno.
+
+*_Margin:_* separación opcional existente entre la caja y el resto de cajas adyacentes.
+
+== Display
+Epecifica el tipo de cuadro de representación utilizado para un elemento.
+
+*_box_*: genera un cuadro de elemento de bloque. Comienza en una nueva línea y ocupa todo el ancho
+
+*_inline_*: genera uno o más cuadros de elemento en línea.
+
+*_inline-box_*: El elemento en sí está formateado como un elemento en línea, pero puede aplicar valores de alto y ancho
+
+*_none_*: El elemento se elimina por completo.
+
+== Box-sizing
+La propiedad define cómo se calculan el ancho y el alto de un elemento: debe incluir relleno y bordes, o no.
+
+*_content-box_*: modifica las propiedades de ancho y alto. Incluyendo solo elcontenido. El borde y el relleno no estan incluidos.
+
+*_border-box_*: modifica las propiedades de ancho y alto. incluye el contenido, relleno y borde.
+
+== Flujo de Documento.
+Es la manera en la que los elementos son desplegados en el documento.
+Dependiendo del tipo de elemento.
+
+*Elementos de bloque*: Siempre empiezan en una nueva línea, no se sitúan uno al lado del otro.
+
+*Elemento de línea*: Se colocan en línea hasta que sus anchos lo permitan.
+Cuando completen una línea saltan a la siguiente.
+
+== Tipos de posicionamiento.
+*_static_*: Utiliza el orden natural de los elementos HTML.
+
+*_realtive_*: Los elementos se mueven ligeramente en base a su posición estática.
+
+*_absolute_*: Los elementos se colocan en base al contenedor padre.
+
+*_fixed_*: identico al absoluto, pero aunque hagamos scroll no se mueve.
+
+*_sticky_*: Es tratado como un elemento posicionado relativamente hasta que su bloque contenedor cruza un límite establecido el cual es tratado como "fijo" hasta que alcance el borde opuesto de su bloque contenedor.
+
+== Unidades de Medida en CSS
+*_Absolutas:_* son usadas cuando el tamaño del disposotivo de salida se conoce de antemano
+por ejemplo cuando la salida es en papel, no se recomienda para salida en pantalla
+ya los tamaños de pantalla varían mucho.
+
+* *cm* centimetros
+* *mm* milimetros
+* *in* pulgadas
+
+*_Relativas_*:
+
+* *px*: pixel, se refiere a pixel fisico en pantalla.
+
+* *%* porcentaje, se refiere al valor proporcional del contenedor padre para esa propiedad.
+
+*Relativas a la Fuente*
+
+* *em* tamaño de fuente
+
+* *rem* tamaño de fuente de raiz
+* *ex* ex Aproximadamente la mitad del tamaño de fuente
+* *ch* el ancho del caracter cero
+
+== Selectores Basicos
+
+.Selectores Basicos
+|===
+|Selector |Descripción |Seleccionará
+
+|*
+|Universal
+|Todos los elementos
+
+|h1
+|de Etiqueta
+|Todas las etiquetas h1
+
+|#id
+|de Identificador
+|El elemento que tenga asignado el identificador id
+
+|.class
+|de Clase
+|Todos los elementos que tengan asiganda la clase class
+|===
+
+== Selectores Relacionales
+.Selectores Relacionales
+|===
+|Selector |Descripción |Seleccionará
+
+|div p
+|Descendiente
+|Todos los elementos p que estén dentro de div
+
+|div > p
+|Descendiente
+Directo
+|Todos los elementos p que sean hijos directos de div
+
+|div + p
+|Hermano
+Adyacente
+|El elemento p que sean hermano y este inmediatamente despues de div
+
+|div ~ p
+|Hermano
+General
+|Todos los elementos p que sean hermanos de div
+|===
+
+== Pseudo Selectores
+*_Pseudo elementos:_*  Seleccionan solamente ciertas partes de un elemento o se referieren
+a su ubicación en el DOM.
+
+|===
+|Pseudo Elemento |Seleccionará
+
+|::first-letter
+|La primera letra de un elemento de bloque
+
+|::first-line
+|La primera línea de un elemento de bloque
+
+|::before 
+|La ubicación que esta antes de un elemento
+
+|::after
+|La ubicación que esta después de un elemento
+|===
+
+*Pseudo clases*:Se refieren a los estados que puede tener un elemento.
+
+|===
+|Pseudo clases |Seleccionará
+
+|:visited
+|La primera letra de un elemento de bloque
+
+|:hover
+|Elemento cuando el usuario pasa el ratón sobre el
+
+|:focus
+|Elemento que tiene el focus (hasta que lo pierda)
+
+|:first-child
+|El primer hijo del elemento seleccionado
+|===
+
+== La cascada
+Se refiere a que las declaraciones de estilo pueden estar en
+varios sitios y dependiendo este sitio, afectará a mas o menos elementos.
+
+*Importancia*: el origen, donde esta ubicado el estilo
+
+*Especificidad*: es el peso del selector (que tan específico es?)
+|===
+|Jerarquía |Selector |Especifidad
+
+|4
+|Etiqueta html
+|1,0,0,0 puntos
+
+|3
+|ID
+|0,1,0,0 puntos
+
+|2
+|Clase, pseudoclase, atributo
+|0,0,1,0 puntos
+
+|1
+|Elemento, psedoelemento
+|0,0,0,1 puntos
+
+|0
+|Selector universal *
+|0,0,0,0 puntos
+|===
+
+*Orden*: la última regla declarada "gana" y sobre-escribe a la anterior
+
