@@ -1,0 +1,231 @@
+=== Atributos de eventos globales
+*Atributos de evento de ventana*
+
+Eventos desencadenados para el objeto de ventana (se aplica a la etiqueta <body>):
+
+|===
+|Atributo |valor |Descripcion
+
+|onafterprint
+|script
+|Script que se ejecutará después de imprimir el documento
+
+|onbeforeprint
+|script
+|Script que se ejecutará antes de imprimir el documento
+
+|onbeforeunload
+|script
+|Script que se ejecutará cuando el documento esté a punto de descargarse
+
+|onerror
+|script
+|Script que se ejecutará cuando ocurra un error
+
+|onhashchange
+|script
+|Script que se ejecutará cuando haya habido cambios en la parte de anclaje de una URL
+
+|onload
+|script
+|Se dispara una vez que la página termina de cargarse
+
+|onmessage
+|script
+|Script que se ejecutará cuando se active el mensaje
+
+|onoffline
+|script
+|Script que se ejecutará cuando el navegador comience a funcionar sin conexión
+
+|ononline
+|script
+|Script que se ejecutará cuando el navegador comience a funcionar en línea
+
+|onpagehide
+|script
+|Script que se ejecutará cuando un usuario se aleje de una página
+
+|onpageshow
+|script
+|Script que se ejecutará cuando un usuario navegue a una página
+
+|onpopstate
+|script
+|Script que se ejecutará cuando cambie el historial de la ventana
+
+|onresize
+|script
+|Se activa cuando se cambia el tamaño de la ventana del navegador
+
+|onstorage
+|script
+|Script que se ejecutará cuando se actualice un área de almacenamiento web
+
+|onunload
+|script
+|Se activa una vez que se ha descargado una página (o se ha cerrado la ventana del navegador)
+|===
+
+== Eventos de formulario
+Eventos desencadenados por acciones dentro de un formulario HTML (se aplica a casi todos los elementos HTML, pero se utiliza más en los elementos de formulario):
+
+|===
+|Atributo |valor |Descripcion
+
+|onblur
+|script
+|Se activa en el momento en que el elemento pierde el foco.
+
+|onchange
+|script
+|Dispara el momento en que se cambia el valor del elemento
+
+|oncontextmenu
+|script
+|Script que se ejecutará cuando se active un menú contextual
+
+|onfocus
+|script
+|Dispara el momento en que el elemento se enfoca
+
+|oninput
+|script
+|Script que se ejecutará cuando un elemento reciba la entrada del usuario
+
+|oninvalid
+|script
+|Script que se ejecutará cuando un elemento no sea válido
+
+|onreset
+|script
+|Se activa cuando se hace clic en el botón Restablecer en un formulario
+
+|onsearch
+|script
+|Se activa cuando el usuario escribe algo en un campo de búsqueda (para <input = "search">)
+
+|onselect
+|script
+|Se activa después de que se haya seleccionado algún texto en un elemento
+
+|onsubmit
+|script
+|Se activa cuando se envía un formulario
+|===
+
+=== Eventos de teclado
+
+
+|===
+|Atributo |valor |Descripcion
+
+|onkeydown
+|script
+|Se dispara cuando un usuario presiona una tecla.
+
+|onkeypress
+|script
+|Fires when a user presses a key
+
+|onkeyup
+|script
+|Se activa cuando un usuario suelta una clave
+|===
+
+== Eventos del raton
+|===
+|Atributo |valor |Descripcion
+
+|onclick
+|script
+|Se activa con un clic del mouse sobre el elemento.
+
+|ondblclick
+|script
+|Dispara con el mouse, haga doble clic en el elemento
+
+|onmousedown
+|script
+|Se dispara cuando se presiona un botón del mouse sobre un elemento
+
+|onmousemove
+|script
+|Se activa cuando el puntero del mouse se mueve mientras está sobre un elemento
+
+|onmouseout
+|script
+|Se dispara cuando el puntero del mouse se mueve fuera de un elemento
+
+|onmouseover
+|script
+|Se activa cuando el puntero del mouse se mueve sobre un elemento
+
+|onmouseup
+|script
+|Se activa cuando se suelta un botón del mouse sobre un elemento
+
+|onmousewheel
+|script
+|Obsoleto. Utilice el atributo onwheel en su lugar
+
+|onwheel
+|script
+|Se dispara cuando la rueda del mouse rueda hacia arriba o hacia abajo sobre un elemento
+|===
+
+== Eventos de arrastre
+
+|===
+|Atributo |valor |Descripcion
+
+|ondrag
+|script
+|Script que se ejecutará cuando se arrastre un elemento
+
+|ondragend
+|script
+|Script que se ejecutará al final de una operación de arrastre
+
+|ondragenter
+|script
+|Script que se ejecutará cuando un elemento se haya arrastrado a un destino de colocación válido
+
+|ondragleave
+|script
+|Script que se ejecutará cuando un elemento deje un destino de caída válido
+
+|ondragover
+|script
+|Script que se ejecutará cuando un elemento se arrastre sobre un destino de colocación válido
+
+|ondragstart
+|script
+|Script que se ejecutará al comienzo de una operación de arrastre
+
+|ondrop
+|script
+|Script que se ejecutará cuando se suelte el elemento arrastrado
+
+|onscroll
+|script
+|Script to be run when an element's scrollbar is being scrolled
+|===
+
+== Eventos del portapapeles
+
+|===
+|Atributo |valor |Descripcion
+
+|oncopy
+|script
+|Se activa cuando el usuario copia el contenido de un elemento
+
+|oncut
+|script
+|Se activa cuando el usuario corta el contenido de un elemento
+
+|onpaste
+|script
+|Se activa cuando el usuario pega algo de contenido en un elemento
+|===
